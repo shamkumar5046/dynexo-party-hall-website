@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Glassmorphism effect for navbar */
+.glassmorphism {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.dark .glassmorphism {
+  background: rgba(26, 26, 26, 0.85);
+}
+
+/* Gold gradient text */
+.gold-gradient-text {
+  background: linear-gradient(to right, #C5A059, #E5C580, #C5A059);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Parallax background */
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax-bg {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Feature card hover */
+.feature-card:hover .feature-content {
+  transform: translateY(-5px);
+}
+
+/* Reveal content on group hover */
+.reveal-content {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+}
+
+.group:hover .reveal-content {
+  max-height: 200px;
+  opacity: 1;
+  margin-top: 1rem;
+}
+
+/* Masonry grid for gallery */
+.masonry-grid {
+  column-count: 1;
+  column-gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .masonry-grid {
+    column-count: 2;
+  }
+}
+
+@media (min-width: 1024px) {
+  .masonry-grid {
+    column-count: 3;
+  }
+}
+
+.break-inside-avoid {
+  break-inside: avoid;
+  margin-bottom: 1.5rem;
+}
+
+/* Gallery filter button underline */
+.filter-btn {
+  position: relative;
+}
+
+.filter-btn::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 50%;
+  background-color: #C5A059;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.filter-btn:hover::after,
+.filter-btn.active::after {
+  width: 100%;
+}
+
+/* Sticky filter menu transition */
+#sticky-filter-menu {
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+#sticky-filter-menu.filter-hidden {
+  opacity: 0;
+  transform: translateY(-20px);
+  pointer-events: none;
+}
+
+/* Serif font for FAQ */
+.serif-font {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Hide details marker */
+details>summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Modal fade-in-up animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.3s ease-out forwards;
+}
+
+/* Hide scrollbar but keep scroll */
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
