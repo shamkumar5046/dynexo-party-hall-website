@@ -27,7 +27,7 @@ const App: React.FC = () => {
 
     return (
         <EnquiryContext.Provider value={{ openEnquiry }}>
-            <div className="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark font-body antialiased transition-colors duration-300">
+            <div className="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark font-body antialiased transition-colors duration-300 overflow-x-hidden">
                 <ScrollToTop />
                 <Navbar onEnquireClick={openEnquiry} />
                 <EnquiryModal isOpen={enquiryOpen} onClose={() => setEnquiryOpen(false)} />

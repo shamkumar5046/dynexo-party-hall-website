@@ -262,7 +262,7 @@ const Features: React.FC = () => {
                     </div>
                     <div
                         ref={carouselRef}
-                        className="flex gap-4 md:gap-8 overflow-x-auto pb-8 snap-x snap-mandatory scroll-smooth hide-scrollbar px-[calc((100vw-300px)/2)] sm:px-0"
+                        className="flex gap-4 md:gap-8 overflow-x-auto pb-8 snap-x snap-mandatory scroll-smooth hide-scrollbar"
                         onScroll={handleCarouselScroll}
                     >
                         {rooms.map((room, index) => {
